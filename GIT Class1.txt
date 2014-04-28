@@ -357,3 +357,10 @@ enter passphrase/password
 
 7) do watever changes needed and repeat steps, 4 and 6
 6 is for uploading!!
+------
+Download GITHUB for windows client
+
+repositories-> choose location-> scan for repositories
+you can add them.. 
+here you got ui kind of commits!
+publish, sync, etc
