@@ -1,1 +1,10 @@
-testfile 3 text added.
+Git -> GitBash-> command line
+
+git init projectfolder
+git add filename or .
+git commit -m "message"
+quick commit : git commit -a -m "message"
+git log - shows all commits
+git status -> shows if there is any update
+git diff
+git diff --cached

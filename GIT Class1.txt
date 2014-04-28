@@ -1,0 +1,359 @@
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   TestFile2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        TestFile.txt
+
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git add TestFile.txt
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   TestFile.txt
+        new file:   TestFile2.txt
+
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git commit -m "initial commit with two empty files"
+[master (root-commit) 0675e03] initial commit with two empty files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 TestFile.txt
+ create mode 100644 TestFile2.txt
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git log
+commit 0675e039d3ca1a023a0fc54e9222c0ea9c6562e0
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:10:17 2014 -0700
+
+    initial commit with two empty files
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        TestFile3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git add .
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git commit -m "added third file"
+[master 6432aaf] added third file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 TestFile3.txt
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git log
+commit 6432aafc995fa181d1c976c70b0fdf0a9da189f6
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:11:41 2014 -0700
+
+    added third file
+
+commit 0675e039d3ca1a023a0fc54e9222c0ea9c6562e0
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:10:17 2014 -0700
+
+    initial commit with two empty files
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   TestFile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git commit -m "modified testfile.txt accepted"
+On branch master
+Changes not staged for commit:
+        modified:   TestFile.txt
+
+no changes added to commit
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git add .
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git commit -m "testfile.txt modification accepted"
+[master 794b93b] testfile.txt modification accepted
+ 1 file changed, 1 insertion(+)
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   TestFile2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+        add
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git add .
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git commit -m "testfile2 modified"
+[master 2f1e523] testfile2 modified
+ 1 file changed, 1 insertion(+)
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git diff
+diff --git a/TestFile3.txt b/TestFile3.txt
+index e69de29..83e0605 100644
+--- a/TestFile3.txt
++++ b/TestFile3.txt
+@@ -0,0 +1 @@
++testfile 3 text added.
+\ No newline at end of file
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   TestFile3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git add .
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git commit -m " commit third file changes"
+[master 8d2a0a6]  commit third file changes
+ 1 file changed, 1 insertion(+)
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git log
+commit 8d2a0a6bef708b62b1b571c6660647a0c1b0e970
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:18:41 2014 -0700
+
+     commit third file changes
+
+commit 2f1e5235ce2a82329450c249f29d05a17c0541a9
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:15:57 2014 -0700
+
+    testfile2 modified
+
+commit 794b93bb8a21ae6ba7862470193dcb8f1198c9fa
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:14:36 2014 -0700
+
+    testfile.txt modification accepted
+
+commit 6432aafc995fa181d1c976c70b0fdf0a9da189f6
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:11:41 2014 -0700
+
+    added third file
+
+commit 0675e039d3ca1a023a0fc54e9222c0ea9c6562e0
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:10:17 2014 -0700
+
+    initial commit with two empty files
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git log --oneline
+8d2a0a6  commit third file changes
+2f1e523 testfile2 modified
+794b93b testfile.txt modification accepted
+6432aaf added third file
+0675e03 initial commit with two empty files
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   TestFile2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git commit -a -m "quick shortcut is git commit -a -m message within quotes in
+stead of add . and then committing "
+[master d433cac] quick shortcut is git commit -a -m message within quotes instea
+d of add . and then committing
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git log
+commit d433cac64307d8676e037186197e4b774b8b52a5
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:21:36 2014 -0700
+
+    quick shortcut is git commit -a -m message within quotes instead of add . an
+
+commit 8d2a0a6bef708b62b1b571c6660647a0c1b0e970
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:18:41 2014 -0700
+
+     commit third file changes
+
+commit 2f1e5235ce2a82329450c249f29d05a17c0541a9
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:15:57 2014 -0700
+
+    testfile2 modified
+
+commit 794b93bb8a21ae6ba7862470193dcb8f1198c9fa
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:14:36 2014 -0700
+
+    testfile.txt modification accepted
+
+commit 6432aafc995fa181d1c976c70b0fdf0a9da189f6
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:11:41 2014 -0700
+
+    added third file
+
+commit 0675e039d3ca1a023a0fc54e9222c0ea9c6562e0
+Author: jaanumahe <chatwithmejaanu@gmail.com>
+Date:   Mon Apr 28 12:10:17 2014 -0700
+
+    initial commit with two empty files
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status -s
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$ git status -s
+ M TestFile3.txt
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects/Project1 (maste
+r)
+$
+-------------
+GITHUB:
+Create a new repository on the command line
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/chatwithmejaanu/TestGit.git
+git push -u origin master
+
+
+Push an existing repository from the command line
+
+git remote add origin https://github.com/chatwithmejaanu/TestGit.git
+git push -u origin master
+------------------
+GITHUB:
+Welcome to Git (version 1.9.2-preview20140411)
+
+
+Run 'git help git' to display the help index.
+Run 'git help <command>' to display help for specific commands.
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects
+$ ssh-keygen -t rsa -C "chatwithmejaanu@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Mahendran/.ssh/id_rsa):
+Created directory '/c/Users/Mahendran/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Mahendran/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Mahendran/.ssh/id_rsa.pub.
+The key fingerprint is:
+bf:1e:11:9a:5e:64:26:39:48:49:d6:eb:75:53:14:48 chatwithmejaanu@gmail.com
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.252.128)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.252.128' (RSA) to the list of know
+n hosts.
+Enter passphrase for key '/c/Users/Mahendran/.ssh/id_rsa':
+Hi chatwithmejaanu! You've successfully authenticated, but GitHub does not provi
+de shell access.
+
+JaanuMahe@JAANUMAHE /c/Jaanu/Environment Setup Java/GIT Projects
+$
+1) eclipse project folder - whichever code has to be uploaded
+2) git init
+3) check git status
+4) git add ., git commit -m "message"
+5) origin - our option to give
+git remote add origin (copy from project folder ssh)
+6)git push origin master
+enter passphrase/password 
+
+7) do watever changes needed and repeat steps, 4 and 6
+6 is for uploading!!
